@@ -124,3 +124,8 @@ Census가 2026-09~11월을 공개하면 `uv run python scripts/score_frozen_fore
 - 소액면세 중단(EO 14324, 2025-08-29): [White & Case](https://www.whitecase.com/insight-alert/united-states-suspend-customs-de-minimis-entry-most-shipments-august-29-2025)
 - 소액면세 화물의 Census 통계 제외: Fajgelbaum & Khandelwal, *The Value of De Minimis Imports*, [NBER WP 32607](https://www.nber.org/papers/w32607) (2024)
 - 데이터 원천 7개의 링크는 위 [데이터](#데이터) 절.
+
+## 라이선스
+
+- 코드와 문서: [MIT License](LICENSE)
+- `data/raw/`의 원본 데이터는 MIT 라이선스 대상이 아니다. 각 기관(위 [데이터](#데이터) 절)이 공개한 자료를 재현용으로 보관한 것이며, 해당 기관의 이용 조건을 따른다.
