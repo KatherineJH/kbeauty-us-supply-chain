@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="316.8pt" viewBox="0 0 720 316.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 316.8 
+L 720 316.8 
+L 720 0 
+L 0 0 
+z
+" style="fill: #f5f1e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 36.107344 258.443369 
+L 635.4835 258.443369 
+L 635.4835 68.589437 
+L 36.107344 68.589437 
+z
+" style="fill: #f5f1e8"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 356.359563 258.443369 
+L 553.226937 258.443369 
+L 553.226937 68.589437 
+L 356.359563 68.589437 
+z
+" clip-path="url(#p7b308a7542)" style="fill: #ded9cf; opacity: 0.35"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m13ed2d8971" d="M 0 0 
+L 0 3 
+" style="stroke: #171717; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m13ed2d8971" x="36.107344" y="258.443369" style="fill: #171717; stroke: #171717; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 14.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="36.107344" y="278.742441" transform="rotate(-0 36.107344 278.742441)">24.01</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m13ed2d8971" x="135.911974" y="258.443369" style="fill: #171717; stroke: #171717; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 14.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="135.911974" y="278.742441" transform="rotate(-0 135.911974 278.742441)">24.07</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m13ed2d8971" x="236.813358" y="258.443369" style="fill: #171717; stroke: #171717; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 14.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="236.813358" y="278.742441" transform="rotate(-0 236.813358 278.742441)">25.01</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m13ed2d8971" x="336.06961" y="258.443369" style="fill: #171717; stroke: #171717; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 14.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="336.06961" y="278.742441" transform="rotate(-0 336.06961 278.742441)">25.07</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m13ed2d8971" x="436.970994" y="258.443369" style="fill: #171717; stroke: #171717; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 14.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="436.970994" y="278.742441" transform="rotate(-0 436.970994 278.742441)">26.01</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m13ed2d8971" x="536.227247" y="258.443369" style="fill: #171717; stroke: #171717; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 14.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="536.227247" y="278.742441" transform="rotate(-0 536.227247 278.742441)">26.07</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path d="M 36.107344 199.017533 
+L 635.4835 199.017533 
+" clip-path="url(#p7b308a7542)" style="fill: none; stroke: #ded9cf; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_7">
+      <text style="font-size: 14.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: end; fill: #171717" x="30.107344" y="205.917069" transform="rotate(-0 30.107344 205.917069)">100</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path d="M 36.107344 136.798534 
+L 635.4835 136.798534 
+" clip-path="url(#p7b308a7542)" style="fill: none; stroke: #ded9cf; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_8">
+      <text style="font-size: 14.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: end; fill: #171717" x="30.107344" y="143.698071" transform="rotate(-0 30.107344 143.698071)">150</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <path d="M 36.107344 74.579536 
+L 635.4835 74.579536 
+" clip-path="url(#p7b308a7542)" style="fill: none; stroke: #ded9cf; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_9">
+      <text style="font-size: 14.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: end; fill: #171717" x="30.107344" y="81.479072" transform="rotate(-0 30.107344 81.479072)">200</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_13">
+    <path d="M 356.359563 258.443369 
+L 356.359563 68.589437 
+" clip-path="url(#p7b308a7542)" style="fill: none; stroke-dasharray: 2.7,1.8; stroke-dashoffset: 0; stroke: #8a6100; stroke-width: 0.9"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 36.107344 221.787721 
+L 53.107033 241.53383 
+L 69.009969 211.220063 
+L 86.009659 202.935012 
+L 102.460971 196.377834 
+L 119.460661 190.390235 
+L 135.911974 198.742818 
+L 152.911663 197.358491 
+L 169.911353 158.343901 
+L 186.362666 185.735921 
+L 203.362355 194.572791 
+L 219.813668 189.211773 
+L 236.813358 207.662498 
+L 253.813047 226.824985 
+L 269.167606 199.25302 
+L 286.167295 198.761531 
+L 302.618608 151.079298 
+L 319.618298 189.679639 
+L 336.06961 161.885127 
+L 353.0693 201.114025 
+L 370.06899 183.104761 
+L 386.520302 149.525608 
+L 403.519992 201.09765 
+L 419.971305 193.47612 
+L 436.970994 209.187413 
+L 453.970684 213.128071 
+L 469.325243 176.573792 
+L 486.324932 161.550983 
+L 502.776245 170.152007 
+L 519.775935 139.193746 
+L 536.227247 148.884868 
+L 553.226937 129.066089 
+" clip-path="url(#p7b308a7542)" style="fill: none; stroke: #171717; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 36.107344 210.914715 
+L 53.107033 249.813645 
+L 69.009969 196.641496 
+L 86.009659 199.305786 
+L 102.460971 204.248858 
+L 119.460661 182.859419 
+L 135.911974 189.901712 
+L 152.911663 195.338066 
+L 169.911353 177.637667 
+L 186.362666 197.753337 
+L 203.362355 198.963918 
+L 219.813668 184.831773 
+L 236.813358 210.278446 
+L 253.813047 238.966961 
+L 269.167606 202.909875 
+L 286.167295 189.011197 
+L 302.618608 130.105944 
+L 319.618298 167.444962 
+L 336.06961 144.453014 
+L 353.0693 164.96872 
+L 370.06899 148.214977 
+L 386.520302 120.026071 
+L 403.519992 170.823918 
+L 419.971305 150.729841 
+L 436.970994 155.51841 
+L 453.970684 168.260205 
+L 469.325243 109.183839 
+L 486.324932 107.668723 
+L 502.776245 134.852388 
+L 519.775935 108.893245 
+L 536.227247 77.219161 
+L 553.226937 95.403429 
+" clip-path="url(#p7b308a7542)" style="fill: none; stroke: #d9a21b; stroke-width: 2.6; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 36.107344 199.017533 
+L 635.4835 199.017533 
+" clip-path="url(#p7b308a7542)" style="fill: none; stroke-dasharray: 0.8,1.32; stroke-dashoffset: 0; stroke: #8b8b85; stroke-width: 0.8"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 36.107344 258.443369 
+L 36.107344 68.589437 
+" style="fill: none; stroke: #171717; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 36.107344 258.443369 
+L 635.4835 258.443369 
+" style="fill: none; stroke: #171717; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 500; font-size: 10.2px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #8a6100" x="360.359563" y="80.296371" transform="rotate(-0 360.359563 80.296371)">2025.08 관세 15%·소액면세 중단</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 600; font-size: 15.2px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #171717" x="559.226937" y="134.465503" transform="rotate(-0 559.226937 134.465503)">수입 금액  +11.7%</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 15.2px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #8a6100" x="559.226937" y="100.802843" transform="rotate(-0 559.226937 100.802843)">해상+항공 중량  +39.5%</text>
+   </g>
+  </g>
+  <g id="text_13">
+   <text style="font-weight: 700; font-size: 21.8px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #171717" x="8.64" y="32.266191" transform="rotate(-0 8.64 32.266191)">정책 이후 중량이 금액보다 훨씬 빨리 늘었다</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 15.9px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #8b8b85" x="8.64" y="54.993856" transform="rotate(-0 8.64 54.993856)">월별 지수(2024년 평균 = 100). 라벨의 %는 정책 전후 12개월 합계의 변화</text>
+  </g>
+  <g id="text_15">
+   <g id="patch_6">
+    <path d="M 636.8535 28.059563 
+L 712.608 28.059563 
+Q 715.008 28.059563 715.008 25.659563 
+L 715.008 11.712 
+Q 715.008 9.312 712.608 9.312 
+L 636.8535 9.312 
+Q 634.4535 9.312 634.4535 11.712 
+L 634.4535 25.659563 
+Q 634.4535 28.059563 636.8535 28.059563 
+z
+" style="fill: #fbf9f4; stroke: #171717; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <text style="font-weight: 600; font-size: 9.6px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: end; fill: #171717" x="711.36" y="22.095937" transform="rotate(-0 711.36 22.095937)">OBSERVED · 관측</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 10.2px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #8b8b85" x="8.64" y="305.699648" transform="rotate(-0 8.64 305.699648)">출처: U.S. Census Bureau 수입 통계(한국산 HS 3303·3304·3305·3307)</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7b308a7542">
+   <rect x="36.107344" y="68.589437" width="599.376156" height="189.853932"/>
+  </clipPath>
+ </defs>
+</svg>

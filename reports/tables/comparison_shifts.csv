@@ -1,0 +1,38 @@
+﻿metric,label,country,change,is_korea
+value_usd,수입 금액,Korea,-0.014664403472,True
+value_usd,수입 금액,Canada,0.03387871418,False
+value_usd,수입 금액,China,0.030090044058,False
+value_usd,수입 금액,France,-0.045098349808,False
+value_usd,수입 금액,Germany,0.050181895601,False
+value_usd,수입 금액,Italy,-0.167020242488,False
+value_usd,수입 금액,Japan,-0.106809112045,False
+value_usd,수입 금액,Mexico,0.143149805567,False
+value_usd,수입 금액,United Kingdom,0.197652571083,False
+measured_weight_kg,수입 중량(해상+항공),Korea,0.184888370128,True
+measured_weight_kg,수입 중량(해상+항공),China,0.110778031951,False
+measured_weight_kg,수입 중량(해상+항공),France,0.156755893882,False
+measured_weight_kg,수입 중량(해상+항공),Germany,0.038914166069,False
+measured_weight_kg,수입 중량(해상+항공),Italy,-0.085540093799,False
+measured_weight_kg,수입 중량(해상+항공),Japan,-0.057291798129,False
+measured_weight_kg,수입 중량(해상+항공),United Kingdom,0.311361960398,False
+air_weight_kg,항공 중량,Korea,0.500710914501,True
+air_weight_kg,항공 중량,China,0.229149964544,False
+air_weight_kg,항공 중량,France,0.251362305772,False
+air_weight_kg,항공 중량,Germany,-0.465702635888,False
+air_weight_kg,항공 중량,Italy,-0.163559478629,False
+air_weight_kg,항공 중량,Japan,-0.230785275245,False
+air_weight_kg,항공 중량,United Kingdom,0.644104281904,False
+air_usd_per_kg,항공 kg당 단가,Korea,-0.626540579666,True
+air_usd_per_kg,항공 kg당 단가,China,0.273614453621,False
+air_usd_per_kg,항공 kg당 단가,France,-0.356666125609,False
+air_usd_per_kg,항공 kg당 단가,Germany,0.466771001987,False
+air_usd_per_kg,항공 kg당 단가,Italy,-0.090703747901,False
+air_usd_per_kg,항공 kg당 단가,Japan,-0.241818661078,False
+air_usd_per_kg,항공 kg당 단가,United Kingdom,-0.437663720906,False
+vessel_usd_per_kg,해상 kg당 단가,Korea,-0.142165930862,True
+vessel_usd_per_kg,해상 kg당 단가,China,-0.099895434166,False
+vessel_usd_per_kg,해상 kg당 단가,France,-0.090911151343,False
+vessel_usd_per_kg,해상 kg당 단가,Germany,0.050407286934,False
+vessel_usd_per_kg,해상 kg당 단가,Italy,-0.021636973344,False
+vessel_usd_per_kg,해상 kg당 단가,Japan,0.055679248091,False
+vessel_usd_per_kg,해상 kg당 단가,United Kingdom,-0.056157661431,False

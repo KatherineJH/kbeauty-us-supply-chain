@@ -1,0 +1,16 @@
+﻿claim_id,claim,value,evidence_level,source_table,method,sample_size,robustness_status,causal_claim_allowed,notebook
+C01,정책 후 12개월 미국 수입 금액과 중량이 함께 늘었다,"금액 +11.7%, 해상+항공 중량 +39.5%",observed,window_totals,정책 전후 12개월 합계 비교,12개월 × 2,해당 없음(집계),False,01_data_overview
+C02,"미국 기록 kg당 단가가 떨어졌고, 하락의 대부분은 같은 품목 안의 단가 변화다","해상 -16.9%, 항공 -36.0%; 품목 내 몫 78~87%",observed,unit_value_decomposition,구성·가격 항등식 분해(HS10),HS10 × 12개월 × 2,항등식 검증 통과,False,02_unit_value
+C03,미국 측 변화는 한국만의 변화로 판정되지 않는다,지표 5개 모두 Holm 보정 p ≥ 0.05(최소 0.38); 평행 추세 위반 2개,estimated,comparison_did,"이중차분 + 시간 × 국가 위약 순위, Holm·BH","비교국 8개 이하, 위약 최대 117개",부분: 평행 추세 충족 지표 3개만 해석,False,03_cross_country
+C04,소포가 미국 통계에 새로 잡혔다는 가설은 지지되지 않는다,미국/한국 금액 비율 -14.1% (HAC p 0.005),estimated,mirror_shift,"미러 비율의 수준 이동, Newey-West HAC",정책 전 20 · 후 12개월,부분: 시간 위약 p 0.36(최대 전환점 2026-01),False,04_mirror
+C05,"같은 흐름이 한국에서는 더 비싸게, 미국에서는 더 싸게 기록됐다","kg당 금액 한국 +8.0%, 미국 -19.7%",observed,granularity_decomposition,양국 통계 HS6 합계의 kg당 금액,HS6 16개 × 12개월 × 2,세분 수준(HS6·HSK10·HS10)과 무관하게 같은 방향,False,04_mirror
+C06,환율은 미국 측 달러 단가 하락의 일부만 설명한다,"해상 23%, 항공 10%, 해상+항공 20%",observed,fx_decomposition,달러·원화 단가 항등식 분해,12개월 × 2,항등식,False,02_unit_value
+C07,남는 설명은 미국 측 신고 가격(과세가격 산정)의 변화다,C04~C06으로 소포·환율·구성 설명을 제거한 뒤 남는 가설,hypothesis,"mirror_shift, fx_decomposition",대안 설명 제거,-,검증 불가(통관 건별 자료 필요),False,04_mirror
+C08,정책 전후 해상 리드타임은 변하지 않았다,서부 +0일(95% CI +0~+0); 걸프 +0일(95% CI -1~+1); 동부 -1일(95% CI -2~+1),estimated,decision_q5_shift,"중앙값 차이, 부트스트랩",선박 660건,세 권역 모두 CI가 0 포함,False,06_decision
+C09,"외부 흐름 예측은 1개월 앞 직전 값, 3개월 앞 계절 ETS(품목·운송수단별 합)가 가장 정확했다","합계 WAPE 1개월 0.112, 3개월 0.160",estimated,forecast_hierarchy_wape,"rolling origin 백테스트, Diebold-Mariano",기준 시점 8개(3개월 앞 6개),"부분: 3개월 앞 우위만 DM p 0.001, 1개월 앞 p 0.17",False,05_forecasting
+C10,"머신러닝 9종을 검증 성적으로 고른 모델은 운영 규칙과 통계적으로 구분되는 개선을 입증하지 못해 운영 규칙(1개월 직전 값, 3개월 계절 ETS 합)을 유지했다(ML 채택 보류)","[작성 환경(Windows, 비공식)] 1개월 0.138, 3개월 0.144; 부스팅 1개월 0.082~0.103(사후 비교)",estimated,"forecast_hierarchy_wape, forecast_ml_selection","nested rolling origin, 76개 설정",기준 시점 8개,"부분: 모든 차이 DM p > 0.1, 고정 예측(2026-09~11) 채점 대기",False,05_forecasting
+C11,80% 예측 구간은 실제보다 좁다,실제 포함률 71~78%,estimated,forecast_conformal,leave-one-origin-out split-conformal,노드 15개 × 기준 시점,보정 표본이 작아 불안정,False,05_forecasting
+C12,한국 수출 통계는 미국 수입의 선행 지표로 이득이 없다,WAPE 0.119 vs 직전 값 0.112,estimated,forecast_nowcast,1개월 앞 백테스트,기준 시점 8개,양국 기록 비율이 이동 중,False,05_forecasting
+C13,해상 수입의 대부분이 LA·롱비치로 들어온다,LA·롱비치 비중 81.8%(정책 후 12개월 평균),observed,"decision_port_disruption, port_concentration",하역항별 해상 금액,12개월,해당 없음(집계),False,06_decision
+C14,"LA·롱비치가 2주 멈추면 해상 수입 약 5,500만 달러가 지연된다","5,501만 달러(7일 2,751만 달러, 30일 11,788만 달러)",scenario,decision_port_disruption,일평균 해상 금액 × 비중 × 중단 일수,-,"가정: 중단 기간, 비중 일정(assumptions)",False,06_decision
+C15,내륙 운송이 손익분기 이하이면 서부 하역이 동부 직송보다 재고를 덜 묶는다,손익분기 10.1~14.8일(내륙 표준편차 2일이면 13.6~14.2일),scenario,decision_route_sensitivity,"안전재고 공식, 관측 해상 리드타임 + 가정 내륙 구간",선박 연결 관측치,가정: 내륙 일수·변동·수요 변동·서비스 수준,False,06_decision

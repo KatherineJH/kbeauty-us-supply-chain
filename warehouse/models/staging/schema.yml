@@ -1,0 +1,83 @@
+version: 2
+
+models:
+  - name: stg_census__hs10_monthly
+    description: "Census HS10 monthly imports from Korea (CTY_CODE 5800), US total."
+    columns:
+      - name: month
+        tests: [not_null]
+      - name: hs10
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('hs10_category')
+                field: hs10
+      - name: value_usd
+        tests: [not_null]
+      - name: other_value_usd
+        description: "Value not reported as vessel or air (land, mail, unknown). Must be >= 0."
+  - name: stg_census__port_hs6_monthly
+    description: "Census port-of-unlading x HS6 monthly imports from Korea."
+    columns:
+      - name: month
+        tests: [not_null]
+      - name: port_code
+        tests: [not_null]
+  - name: stg_vessel__routes
+    description: "Vessel-level Busan departure to US entrance filing observations."
+    columns:
+      - name: observation_id
+        tests: [not_null, unique]
+      - name: departure_to_filing_days
+        description: "Days from Busan departure to US CF-1400 filing date (filing date definition unconfirmed by CBP)."
+  - name: stg_census__peer_hs10_monthly
+    description: "Census HS10 monthly US imports from the eight pre-registered peer countries."
+    columns:
+      - name: cty_code
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('peer_countries')
+                field: cty_code
+      - name: month
+        tests: [not_null]
+      - name: value_usd
+        tests: [not_null]
+  - name: stg_kcs__kr_exports_us
+    description: "Korea Customs Service Korea -> US trade by HSK10 (HS 3303/3304/3305/3307)."
+    columns:
+      - name: month
+        tests: [not_null]
+      - name: hsk10
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_kcs__hsk10_names')
+                field: hsk10
+      - name: hs4
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['3303', '3304', '3305', '3307']
+  - name: stg_kcs__hsk10_names
+    description: "Korean HSK10 item names from the archived KCS responses (statKor field, UTF-8)."
+    columns:
+      - name: hsk10
+        tests: [not_null, unique]
+      - name: name_ko
+        tests: [not_null]
+  - name: stg_fed_board__fx_monthly
+    description: "Monthly average exchange rates, local currency per USD (Federal Reserve Board G.5)."
+    columns:
+      - name: currency
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('country_currency')
+                field: currency
+      - name: lcu_per_usd
+        tests: [not_null]

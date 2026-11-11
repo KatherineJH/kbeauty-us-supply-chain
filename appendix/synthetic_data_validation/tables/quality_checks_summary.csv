@@ -1,0 +1,32 @@
+area,check,target,violations,verdict,note
+결측,NOT NULL 열의 결측,전체,0,✅,
+결측,stockout_date NULL ⇔ stockout_days = 0,inventory_impact_results,0,✅,
+결측,baseline_stockout_date NULL ⇔ baseline_stockout_days = 0,inventory_impact_results,0,✅,
+결측,"기준선 안전재고 하회일 ≤ 품절일, 품절 ⇒ 하회",inventory_impact_results,0,✅,
+결측,행사 이름 NULL ⇔ 행사 겹침 일수 0,inventory_impact_results,0,✅,
+범주,허용 목록 위반,50개 열,0,✅,
+키,PK·UNIQUE 중복,80개 제약,0,✅,
+키,FK 고아,57개 FK,0,✅,
+키,회사 경계(회사 열 없는 FK),4개 FK,0,✅,
+재고,on_hand = reserved + available,inventory_daily,0,✅,
+재고,미국 3PL 수지 잔차가 입고일 밖에서 발생,WH-WEST·WH-EAST,0,✅,입고일 잔차 합 = 입고량의 0.5001% (설계 0.5%)
+재고,KR 원산지 수지 잔차(생산 입고),WH-KR,0,🟡,"양의 잔차 21건, 날짜 3개: 2025-06-16, 2025-11-03, 2025-11-17"
+주문,상세가 없는 주문,orders,0,✅,
+주문,약속일 < 주문 시각,orders,0,✅,
+주문,출고 창고가 미국 3PL이 아님,orders,0,✅,
+주문,주문 상태 ↔ 상세 출고 수량,orders,0,✅,
+주문,기간 말 30일 넘게 미완료인 주문,orders,0,✅,기간 말 미완료 주문은 정상(진행 중). 오래된 미완료는 재고 부족 대기일 수 있어 06에서 원인 확인
+선적,한국 출고 계획일 > 3PL 입고 계획일,shipments,0,✅,
+선적,RECEIVED ↔ 실제 입고일 존재,shipments,0,✅,
+선적,예상 항구 도착 > 예상 3PL 입고,shipments,0,✅,
+선적,상세 없는 선적,shipments,0,✅,
+선적,도착 창고가 미국 3PL이 아님,shipments,0,✅,
+선적,선적 수량이 케이스 단위(units_per_case)의 배수가 아님,shipments,0,✅,
+선적,스냅샷 단계 역행,shipment_schedule_snapshots,0,✅,
+선적,마지막 스냅샷 단계 ≠ 선적의 현재 단계,snapshots ↔ shipments,0,✅,
+선적,마지막 스냅샷 예상 입고 ≠ 선적의 현재 예상 입고,snapshots ↔ shipments,0,✅,
+수집,종료 < 시작,data_sync_runs,0,✅,
+수집,받음 ≠ 적재 + 거부,data_sync_runs,0,✅,
+수집,거부 레코드(중복 제외)가 업무 표에 적재됨,data_validation_issues ↔ orders,0,✅,
+수집,중복 거부의 원본이 정확히 1건,data_validation_issues ↔ orders,0,✅,
+수집,수집 실행의 거부 수 합 = 거부 기록 수,data_sync_runs ↔ data_validation_issues,0,✅,"거부 수 합 9, 기록 9"

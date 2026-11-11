@@ -1,0 +1,9 @@
+# Raw and extracted data are hashed byte-for-byte (data/SHA256SUMS): never convert line endings.
+data/** -text
+appendix/**/*.csv -text
+reports/**/*.csv -text
+*.gz binary
+reports/frozen/** -text
+# Bundled fonts are hashed (assets/fonts/*/SHA256SUMS): keep bytes as released.
+assets/fonts/** -text
+*.otf binary

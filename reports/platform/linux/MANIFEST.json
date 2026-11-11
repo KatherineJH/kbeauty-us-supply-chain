@@ -1,0 +1,213 @@
+{
+  "generated_at_utc": "2026-11-05T11:31:24Z",
+  "commit": "10a959161461e3b6ea43ee7743240b15eee66346",
+  "workflow_run": "https://github.com/KatherineJH/kbeauty-us-supply-chain/actions/runs/42018731843",
+  "runner": {
+    "name": "GitHub Actions 1000000553",
+    "image_os": "ubuntu24",
+    "image_version": "20261026.354.1",
+    "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+    "cpu": {
+      "model": "AMD EPYC 9V74 80-Core Processor",
+      "vendor": "AuthenticAMD",
+      "avx2": true,
+      "fma": true,
+      "avx512_exposed": [
+        "avx512_bf16",
+        "avx512_bitalg",
+        "avx512_vbmi2",
+        "avx512_vnni",
+        "avx512_vpopcntdq",
+        "avx512bw",
+        "avx512cd",
+        "avx512dq",
+        "avx512f",
+        "avx512ifma",
+        "avx512vbmi",
+        "avx512vl"
+      ],
+      "flags_sha256_16": "3ab29091a6f541c6",
+      "logical_cpus": 2
+    }
+  },
+  "python": "3.12.3",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "statsmodels": "0.15.0",
+    "pandas": "3.1.0",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "duckdb": "2.0.0",
+    "dbt-core": "1.12.6",
+    "dbt-duckdb": "1.11.1"
+  },
+  "blas": [
+    {
+      "internal_api": "openblas",
+      "prefix": "libscipy_openblas",
+      "version": "0.3.31.dev",
+      "architecture": "Haswell",
+      "num_threads": 1,
+      "threading_layer": "pthreads"
+    },
+    {
+      "internal_api": "openblas",
+      "prefix": "libscipy_openblas",
+      "version": "0.3.34.106.0",
+      "architecture": "Haswell",
+      "num_threads": 1,
+      "threading_layer": "pthreads"
+    }
+  ],
+  "numpy_simd": {
+    "baseline": [
+      "X86_V2"
+    ],
+    "dispatch": [
+      "X86_V3",
+      "X86_V4",
+      "AVX512_ICL",
+      "AVX512_SPR"
+    ],
+    "enabled": [
+      "X86_V3"
+    ]
+  },
+  "env": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_CORETYPE": "Haswell",
+    "NPY_DISABLE_CPU_FEATURES": "X86_V4 AVX512_ICL AVX512_SPR"
+  },
+  "tables": {
+    "assumptions.csv": {
+      "sha256": "17040eeb3b8d3f4814250144d70494fa1afa46c8f00666d0756fcbe928656149",
+      "bytes": 1968
+    },
+    "category_growth.csv": {
+      "sha256": "87ecac9afaf4af502e5ba67f7565764db1dd313ee7914c27b0357c207ca18ea9",
+      "bytes": 508
+    },
+    "claims.csv": {
+      "sha256": "9330089c1f5d6e64c4e20e2fc1fc10a343c65d6a9233720f938ca7f197ef4880",
+      "bytes": 4756
+    },
+    "comparison_did.csv": {
+      "sha256": "cb1b06b0f1c1111be88a7ffc054cd1d7c460da387bb5104aff040e5c374fe2df",
+      "bytes": 1581
+    },
+    "comparison_shifts.csv": {
+      "sha256": "66f5b7174924f15f842db14addaae1f3d5e6fbe23d08cc29eff1342eca6f20e9",
+      "bytes": 2373
+    },
+    "comparison_synth.csv": {
+      "sha256": "9af61c0455f73a80e88576461281f2c97a80473a190923bde14f2f15ea709064",
+      "bytes": 627
+    },
+    "comparison_synth_weights.csv": {
+      "sha256": "a49a45c15f3a48fb20865eae50ee0a254c12c2888974300c413d7e4c26097927",
+      "bytes": 1118
+    },
+    "decision_breakeven.csv": {
+      "sha256": "82bf4609c1a688a5d8cce774834389764ba03f9511c6bfd72556b652038d39fe",
+      "bytes": 322
+    },
+    "decision_port_disruption.csv": {
+      "sha256": "3adb025466ec34357e6f8d2a4d8a5b79ab25bd8f7ccfd56019625b3f319c9233",
+      "bytes": 233
+    },
+    "decision_q5_shift.csv": {
+      "sha256": "0bf1b6cda52e3e67476326d544582b25342c25ed3dc88da7f435724a0846222b",
+      "bytes": 319
+    },
+    "decision_recommendations.csv": {
+      "sha256": "a63e9fbd6e4444fc71a02ebab1d314ccdc7d4a682926aac2b8412514b1990650",
+      "bytes": 2557
+    },
+    "decision_route_sensitivity.csv": {
+      "sha256": "d85dc4670d8aeaff27d56ff461047757cf0bc4e570bce941913e55a6981a4314",
+      "bytes": 29302
+    },
+    "forecast_backtest_detail.csv": {
+      "sha256": "5aee81e24aabe86bf010d0ab0b9ffd47e13ded85fb4c9cd47d6bac6897bf3448",
+      "bytes": 7025
+    },
+    "forecast_conformal.csv": {
+      "sha256": "9106c7e7d5b2420abd89405c7c834d1224251daf00f3f4f9dc3fdd255099a6e0",
+      "bytes": 720
+    },
+    "forecast_cusum.csv": {
+      "sha256": "17345588bcf6f44694265c4a766bb88806d4b4bac7bf1b250b8502b6a7885424",
+      "bytes": 82
+    },
+    "forecast_dm_tests.csv": {
+      "sha256": "e02e1216e41f17b67d48cf52fa391ac74198450c1bdba97ffef046161a229900",
+      "bytes": 590
+    },
+    "forecast_hierarchy_wape.csv": {
+      "sha256": "5b313808eb4f06bad4882c7925a510b2051374a48c70703f1cdced4a822a1803",
+      "bytes": 16117
+    },
+    "forecast_ml_importance.csv": {
+      "sha256": "d2efa96b2bf49ed0173cb2676bd99b0c2fc0262ceeec4be320ad6a8f36ce19d6",
+      "bytes": 1372
+    },
+    "forecast_ml_selection.csv": {
+      "sha256": "44579a06671a2f0ce35db9afdf9ecac54589005511d27c605a99e0eb4d6fa74e",
+      "bytes": 22046
+    },
+    "forecast_nowcast.csv": {
+      "sha256": "eae0f06592b19bc27572eacc70224f9852ce1b0e2c8d1c02bef054225b4f3bfc",
+      "bytes": 95
+    },
+    "forecast_scores.csv": {
+      "sha256": "82b8ad7f1a8cceab6db3d8592b3e40bff99839a5f1b531e56d283f4b16f5b28b",
+      "bytes": 943
+    },
+    "fx_decomposition.csv": {
+      "sha256": "e2b57fec54f029680d43fafd440c5d826e2660791c6812ee2b9b71e300c9d175",
+      "bytes": 897
+    },
+    "granularity_decomposition.csv": {
+      "sha256": "b331ee7f68e42449605b1d4588202d08807b2bfd7cd110f7b3eed101d2af1a27",
+      "bytes": 821
+    },
+    "mirror_monthly.csv": {
+      "sha256": "d1126df08ecc52efafa8d73fe0b69d8c84f4a79f156d3b175f1940e00a5bb0e5",
+      "bytes": 5418
+    },
+    "mirror_shift.csv": {
+      "sha256": "b76292c29d498f7a30a9cbcfa2633ed67054357849c1baa0e9ef934369d3d67f",
+      "bytes": 421
+    },
+    "policy_shifts.csv": {
+      "sha256": "9ccb6a68263a67691b0e8838c3a4d2933ef706a199ababbf7fa16f939ff790e4",
+      "bytes": 1135
+    },
+    "port_concentration.csv": {
+      "sha256": "9ea3712ddc794f51629dd745988911f66d72e9925e91f9decea729c9ca10428f",
+      "bytes": 230
+    },
+    "transit_by_region.csv": {
+      "sha256": "a9752fcb55f0aceb75938ad48645574e2707f68c37943c54b13aa06da15f9d5b",
+      "bytes": 162
+    },
+    "transit_gap.csv": {
+      "sha256": "e41ccb5ab71b86254c30ad53418fc1ade7b3b1d36c840bb26b0fa42082cc834e",
+      "bytes": 77
+    },
+    "unit_value_decomposition.csv": {
+      "sha256": "da72bcb1f98cffec97bd710a15031ff02ffca5187361078d2fec6d503202ec01",
+      "bytes": 460
+    },
+    "window_totals.csv": {
+      "sha256": "5672c7113dd9c867642dc9f6849d080c97f3ad5acfb59b3d47985d6b1e13658b",
+      "bytes": 559
+    }
+  }
+}

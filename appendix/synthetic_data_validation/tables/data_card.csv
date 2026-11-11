@@ -1,0 +1,12 @@
+item,value
+기준선,FINAL_2026_H1_SYNTHETIC_DATA(후보 2 + overlay v1_run1)
+표 / 전체 행,"27개 / 1,323,211행"
+기간,2025-01-01 ~ 2026-06-30(546일)
+회사,"A_BEAUTY, B_COSMETICS"
+SKU,"회사마다 A_BEAUTY 30, B_COSMETICS 20(코드 SKU-001~는 회사 간 공유되지만 다른 상품)"
+창고,"A_BEAUTY: WH-EAST/WH-KR/WH-WEST, B_COSMETICS: WH-EAST/WH-KR/WH-WEST"
+주문 / 상세,"171,888 / 257,690"
+선적,166
+재고 일별,"60,060행(창고 × SKU × 일의 완전 격자)"
+운영 기록(수집·변경),2025-12-31 초기 적재부터. 2025년은 최종 상태 스냅숏만 있음(07)
+분석 계층,"지연 사건 8, 분석 실행 21(시나리오 사례, 08)"

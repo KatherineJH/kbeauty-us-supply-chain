@@ -1,0 +1,105 @@
+# Column glossary for the data dictionary (reports/data_dictionary.csv).
+# One entry per column name; `overrides` holds a model-specific meaning ("model.column").
+# tests/test_documentation.py fails if any warehouse column has no entry, so this file cannot drift.
+# unit: USD, kg, 일, 비율(0~1), 지수, 코드, 텍스트, 날짜, 참/거짓, 개수
+
+columns:
+  month: {description: "기준 월(월 첫날). Census·관세청 통계의 집계 월", unit: 날짜}
+  hs10: {description: "미국 HTS 10단위 품목 코드", unit: 코드}
+  hs10_desc: {description: "Census가 붙인 HTS 10단위 품목명(영문)", unit: 텍스트}
+  hs6: {description: "국제 공통 HS 6단위 품목 코드. 한국 HSK와 미국 HTS를 맞추는 가장 세밀한 공통 단위", unit: 코드}
+  hs6_desc: {description: "Census가 붙인 HS 6단위 품목명(영문)", unit: 텍스트}
+  hs4: {description: "HS 4단위 품목 코드(HSK10의 앞 4자리)", unit: 코드}
+  hsk10: {description: "한국 관세·통계통합품목분류(HSK) 10단위 코드", unit: 코드}
+  name_ko: {description: "관세청 응답 원문의 HSK10 한글 품목명(statKor)", unit: 텍스트}
+  last_seen_month: {description: "해당 HSK10 품목명이 마지막으로 나온 월", unit: 날짜}
+  category: {description: "분석용 품목군 코드(skincare, makeup, hair, nail, fragrance, other). seed hs10_category로 지정", unit: 코드}
+  category_ko: {description: "품목군 한글 이름", unit: 텍스트}
+  mode: {description: "운송수단: vessel(해상), air(항공), other(육로·우편·미상 = 전체 − 해상 − 항공)", unit: 코드}
+  grain_key: {description: "행의 고유 키(월|품목|운송수단 등). 중복 검사용", unit: 텍스트}
+  value_usd: {description: "미국 일반 수입 금액(과세가격 기준, 운임·보험료 제외). 모든 운송수단 합계", unit: USD}
+  vessel_value_usd: {description: "해상 운송 수입 금액", unit: USD}
+  air_value_usd: {description: "항공 운송 수입 금액", unit: USD}
+  other_value_usd: {description: "해상·항공으로 보고되지 않은 금액(육로·우편·미상) = 전체 − 해상 − 항공. 0 이상", unit: USD}
+  vessel_weight_kg: {description: "해상 운송 선적 중량. Census는 해상·항공에만 중량을 공개한다", unit: kg}
+  air_weight_kg: {description: "항공 운송 선적 중량", unit: kg}
+  weight_kg: {description: "선적 중량(해상·항공만 공개, other 운송수단은 비어 있음)", unit: kg}
+  measured_weight_kg: {description: "해상 + 항공 중량. 중량이 공개되는 범위의 합계", unit: kg}
+  measured_value_usd: {description: "해상 + 항공 금액. kg당 단가 계산에 쓰는 금액", unit: USD}
+  unit_value_usd_per_kg: {description: "kg당 단가 = 금액 ÷ 중량(중량이 0이면 비움)", unit: USD/kg}
+  usd_per_kg: {description: "kg당 단가 = 해상+항공 금액 ÷ 해상+항공 중량", unit: USD/kg}
+  vessel_usd_per_kg: {description: "해상 kg당 단가 = 해상 금액 ÷ 해상 중량", unit: USD/kg}
+  air_usd_per_kg: {description: "항공 kg당 단가 = 항공 금액 ÷ 항공 중량", unit: USD/kg}
+  air_share_value: {description: "금액 중 항공 비중", unit: "비율(0~1)"}
+  air_share_weight: {description: "해상+항공 중량 중 항공 비중", unit: "비율(0~1)"}
+  sea_air_share_value: {description: "전체 금액 중 해상+항공 비중", unit: "비율(0~1)"}
+  value_yoy: {description: "수입 금액의 전년 동월 대비 변화율", unit: "비율"}
+  weight_yoy: {description: "해상+항공 중량의 전년 동월 대비 변화율", unit: "비율"}
+  is_post_policy: {description: "정책 후 월 여부(seed policy_events의 첫 완전 월 2025-09 이후)", unit: 참/거짓}
+  quantity: {description: "Census 수량(첫 번째 수량 단위 기준)", unit: "quantity_unit"}
+  quantity_unit: {description: "수량 단위(KG, L 등)", unit: 텍스트}
+  container_value_usd: {description: "해상 수입 중 컨테이너 운송 금액(Census CNT_VAL_MO)", unit: USD}
+  container_weight_kg: {description: "해상 수입 중 컨테이너 운송 중량(Census CNT_WGT_MO)", unit: kg}
+  port_code: {description: "Census 하역항(port of unlading) 4자리 코드. 2704 = Los Angeles, 2709 = Long Beach", unit: 코드}
+  port_name: {description: "Census 하역항 이름(영문, '도시, 주' 형식)", unit: 텍스트}
+  state: {description: "미국 주 약어(하역항 이름에서 추출)", unit: 코드}
+  region: {description: "하역 권역: west_coast, east_coast, gulf_coast, inland, alaska_hawaii, unknown(seed state_region)", unit: 코드}
+  region_ko: {description: "하역 권역 한글 이름", unit: 텍스트}
+  gateway_type: {description: "하역항 유형: air(공항이거나 금액의 95% 이상이 항공), sea_land(그 밖)", unit: 코드}
+  total_value_usd: {description: "전체 기간 해당 하역항의 수입 금액 합계", unit: USD}
+  vessel_ports: {description: "그 달 해상 수입이 있었던 하역항 수", unit: 개수}
+  hhi_vessel: {description: "해상 수입 금액의 하역항 집중도(허핀달-허쉬만 지수, 0~10,000)", unit: 지수}
+  la_lb_share: {description: "해상 수입 금액 중 LA(2704)·롱비치(2709) 비중", unit: "비율(0~1)"}
+  west_coast_share: {description: "해상 수입 금액 중 서부 권역 하역항 비중", unit: "비율(0~1)"}
+  east_coast_share: {description: "해상 수입 금액 중 동부 권역 하역항 비중", unit: "비율(0~1)"}
+  gulf_coast_share: {description: "해상 수입 금액 중 걸프 권역 하역항 비중", unit: "비율(0~1)"}
+  top_port: {description: "그 달 해상 수입 금액이 가장 큰 하역항", unit: 텍스트}
+  cty_code: {description: "Census 국가 코드(한국 5800)", unit: 코드}
+  cty_name: {description: "Census 국가 이름(영문)", unit: 텍스트}
+  country: {description: "국가 이름(영문)", unit: 텍스트}
+  currency: {description: "국가 통화 코드(ISO 4217)", unit: 코드}
+  is_treated: {description: "국가 비교에서 처리군(한국) 여부", unit: 참/거짓}
+  lcu_per_usd: {description: "월평균 환율: 1달러당 자국 통화(Federal Reserve Board G.5). 유로·파운드는 역수로 맞춤", unit: 통화/USD}
+  kr_export_usd: {description: "한국 관세청 대미 수출 금액(FOB)", unit: USD}
+  kr_export_kg: {description: "한국 관세청 대미 수출 중량", unit: kg}
+  us_import_usd: {description: "미국 Census 한국산 수입 금액(과세가격). 미국이 그 달을 공개하지 않았으면 비움", unit: USD}
+  us_vessel_usd: {description: "미국 측 해상 수입 금액", unit: USD}
+  us_air_usd: {description: "미국 측 항공 수입 금액", unit: USD}
+  us_other_usd: {description: "미국 측 해상·항공 외 수입 금액", unit: USD}
+  us_vessel_kg: {description: "미국 측 해상 수입 중량", unit: kg}
+  us_air_kg: {description: "미국 측 항공 수입 중량", unit: kg}
+  us_published: {description: "미국 Census가 그 달을 공개했는지(월 단위). 공개된 달의 빈 HS6는 0으로 본다", unit: 참/거짓}
+  export_usd: {description: "한국 관세청 수출 금액(FOB)", unit: USD}
+  export_kg: {description: "한국 관세청 수출 중량", unit: kg}
+  import_usd: {description: "한국 관세청 수입 금액(미국에서 한국으로)", unit: USD}
+  import_kg: {description: "한국 관세청 수입 중량", unit: kg}
+  observation_id: {description: "선박 연결 관측치 ID(출항 1건 ↔ 미국 입항 신고 1건)", unit: 텍스트}
+  call_sign: {description: "선박 호출부호", unit: 코드}
+  vessel_name: {description: "선박 이름", unit: 텍스트}
+  operator_name: {description: "운항 선사 이름(CF-1400 기재)", unit: 텍스트}
+  busan_departure_datetime: {description: "부산항 출항 일시(PORT-MIS, 한국 시간대)", unit: 날짜}
+  busan_departure_date: {description: "부산항 출항일", unit: 날짜}
+  us_port_code: {description: "미국 입항 항구 코드(CF-1400)", unit: 코드}
+  us_port_name: {description: "미국 입항 항구 이름", unit: 텍스트}
+  us_filing_date: {description: "CF-1400 입항 신고일. CBP가 정의를 공개하지 않아 실제 입항일과 하루 이틀 다를 수 있다", unit: 날짜}
+  filing_month: {description: "입항 신고 월", unit: 날짜}
+  departure_to_filing_days: {description: "부산 출항일부터 미국 입항 신고일까지 일수(해상 리드타임)", unit: 일}
+  match_method: {description: "출항·입항 연결 방법: call_sign, call_sign_history, vessel_name, vessel_name_call_sign_near, unmatched", unit: 코드}
+  match_grade: {description: "원천 파일의 연결 신뢰 등급(A가 가장 확실, D 낮음, U 미연결)", unit: 코드}
+  use_for_stats: {description: "연결 등급과 이상치 검토를 통과해 통계에 쓰는 행(원천 use_for_stats = Y)", unit: 참/거짓}
+  rank: {description: "2024년 미국 HS 3304 수입액 순위(한국 제외, 사전 등록 규칙)", unit: 개수}
+  hs3304_value_usd_2024: {description: "2024년 미국 HS 3304 수입액", unit: USD}
+  event_id: {description: "정책 사건 ID", unit: 코드}
+  event_date: {description: "정책 시행일", unit: 날짜}
+  first_full_month: {description: "정책이 온전히 적용된 첫 달", unit: 날짜}
+  event_ko: {description: "정책 사건 설명", unit: 텍스트}
+  source_url: {description: "정책 사건의 출처 URL", unit: 텍스트}
+
+overrides:
+  fct_imports_hs10_mode_monthly.value_usd: {description: "해당 운송수단(mode)의 수입 금액", unit: USD}
+  mart_category_monthly.value_usd: {description: "품목군의 전체 운송수단 수입 금액", unit: USD}
+  mart_category_monthly.weight_kg: {description: "품목군의 해상 + 항공 중량", unit: kg}
+  mart_country_panel_monthly.value_usd: {description: "국가별 미국 수입 금액(HS 3303·3304·3305·3307, 모든 운송수단)", unit: USD}
+  mart_port_region_monthly.value_usd: {description: "권역 × 하역항 유형의 수입 금액", unit: USD}
+  stg_census__peer_hs10_monthly.value_usd: {description: "비교 8개국에서의 미국 수입 금액", unit: USD}
+  country_currency.cty_code: {description: "Census 국가 코드(숫자형 seed)", unit: 코드}

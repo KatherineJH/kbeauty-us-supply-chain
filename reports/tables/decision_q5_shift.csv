@@ -1,0 +1,4 @@
+﻿region,n_pre,n_post,median_pre,median_post,diff,ci_low,ci_high,sd_pre,sd_post,changed
+west_coast,298,120,13.0,13.0,0.0,0.0,0.0,1.716162216673,1.711531985297,False
+gulf_coast,100,33,26.0,26.0,0.0,-1.0,1.0,1.921147594749,2.526001151659,False
+east_coast,75,34,28.0,27.0,-1.0,-2.0,1.0,2.329443346876,1.89590984841,False

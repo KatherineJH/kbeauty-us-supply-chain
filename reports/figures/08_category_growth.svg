@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="316.8pt" viewBox="0 0 720 316.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 316.8 
+L 720 316.8 
+L 720 0 
+L 0 0 
+z
+" style="fill: #f5f1e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 76.506094 250.286143 
+L 715.68 250.286143 
+L 715.68 67.68 
+L 76.506094 67.68 
+z
+" style="fill: #f5f1e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 143.046923 250.286143 
+L 143.046923 67.68 
+" clip-path="url(#pb09af74ebd)" style="fill: none; stroke: #ded9cf; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="143.046923" y="263.302744" transform="rotate(-0 143.046923 263.302744)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 243.409748 250.286143 
+L 243.409748 67.68 
+" clip-path="url(#pb09af74ebd)" style="fill: none; stroke: #ded9cf; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="243.409748" y="263.302744" transform="rotate(-0 243.409748 263.302744)">50</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 343.772573 250.286143 
+L 343.772573 67.68 
+" clip-path="url(#pb09af74ebd)" style="fill: none; stroke: #ded9cf; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="343.772573" y="263.302744" transform="rotate(-0 343.772573 263.302744)">100</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 444.135398 250.286143 
+L 444.135398 67.68 
+" clip-path="url(#pb09af74ebd)" style="fill: none; stroke: #ded9cf; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="444.135398" y="263.302744" transform="rotate(-0 444.135398 263.302744)">150</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 544.498223 250.286143 
+L 544.498223 67.68 
+" clip-path="url(#pb09af74ebd)" style="fill: none; stroke: #ded9cf; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="544.498223" y="263.302744" transform="rotate(-0 544.498223 263.302744)">200</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 644.861048 250.286143 
+L 644.861048 67.68 
+" clip-path="url(#pb09af74ebd)" style="fill: none; stroke: #ded9cf; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="644.861048" y="263.302744" transform="rotate(-0 644.861048 263.302744)">250</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 10.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: middle; fill: #171717" x="396.093047" y="279.707285" transform="rotate(-0 396.093047 279.707285)">12개월 수입 금액 증감 (백만 달러)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="font-size: 10.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: end; fill: #171717" x="70.506094" y="237.825188" transform="rotate(-0 70.506094 237.825188)">메이크업</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <text style="font-size: 10.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: end; fill: #171717" x="70.506094" y="208.286827" transform="rotate(-0 70.506094 208.286827)">네일</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <text style="font-size: 10.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: end; fill: #171717" x="70.506094" y="178.748467" transform="rotate(-0 70.506094 178.748467)">향수·화장수</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16"/>
+     <g id="text_11">
+      <text style="font-size: 10.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: end; fill: #171717" x="70.506094" y="149.210107" transform="rotate(-0 70.506094 149.210107)">헤어</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_17"/>
+     <g id="text_12">
+      <text style="font-size: 10.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: end; fill: #171717" x="70.506094" y="119.671747" transform="rotate(-0 70.506094 119.671747)">기타</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_18"/>
+     <g id="text_13">
+      <text style="font-size: 10.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: end; fill: #171717" x="70.506094" y="90.133387" transform="rotate(-0 70.506094 90.133387)">스킨케어·선케어</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 143.046923 241.985863 
+L 101.458905 241.985863 
+L 101.458905 223.67208 
+L 143.046923 223.67208 
+z
+" clip-path="url(#pb09af74ebd)" style="fill: #8b8b85"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 143.046923 212.447503 
+L 134.780976 212.447503 
+L 134.780976 194.13372 
+L 143.046923 194.13372 
+z
+" clip-path="url(#pb09af74ebd)" style="fill: #8b8b85"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 143.046923 182.909143 
+L 158.902914 182.909143 
+L 158.902914 164.59536 
+L 143.046923 164.59536 
+z
+" clip-path="url(#pb09af74ebd)" style="fill: #171717"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 143.046923 153.370783 
+L 199.973673 153.370783 
+L 199.973673 135.057 
+L 143.046923 135.057 
+z
+" clip-path="url(#pb09af74ebd)" style="fill: #171717"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 143.046923 123.832423 
+L 289.000462 123.832423 
+L 289.000462 105.518639 
+L 143.046923 105.518639 
+z
+" clip-path="url(#pb09af74ebd)" style="fill: #171717"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 143.046923 94.294063 
+L 444.432753 94.294063 
+L 444.432753 75.980279 
+L 143.046923 75.980279 
+z
+" clip-path="url(#pb09af74ebd)" style="fill: #d9a21b"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 143.046923 250.286143 
+L 143.046923 67.68 
+" clip-path="url(#pb09af74ebd)" style="fill: none; stroke: #171717; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 76.506094 250.286143 
+L 715.68 250.286143 
+" style="fill: none; stroke: #171717; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #171717" x="143.046923" y="236.025993" transform="rotate(-0 143.046923 236.025993)">  -21백만 달러 · 성장 -6% · 비중 16%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #171717" x="143.046923" y="206.487633" transform="rotate(-0 143.046923 206.487633)">  -4백만 달러 · 성장 -20% · 비중 1%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #171717" x="158.902914" y="176.949273" transform="rotate(-0 158.902914 176.949273)">  +8백만 달러 · 성장 +192% · 비중 1%</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #171717" x="199.973673" y="147.410913" transform="rotate(-0 199.973673 147.410913)">  +28백만 달러 · 성장 +29% · 비중 6%</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #171717" x="289.000462" y="117.872553" transform="rotate(-0 289.000462 117.872553)">  +73백만 달러 · 성장 +53% · 비중 9%</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 9px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #171717" x="444.432753" y="88.334192" transform="rotate(-0 444.432753 88.334192)">  +150백만 달러 · 성장 +11% · 비중 68%</text>
+   </g>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #171717" x="8.64" y="25.794902" transform="rotate(-0 8.64 25.794902)">늘어난 수입 금액의 64%를 스킨케어·선케어가 만들었고 메이크업은 줄었다</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 11px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #8b8b85" x="8.64" y="49.567849" transform="rotate(-0 8.64 49.567849)">정책 전후 12개월 품목별 수입 금액 증감(전체 +234백만 달러)</text>
+  </g>
+  <g id="text_22">
+   <g id="patch_10">
+    <path d="M 649.27125 25.542969 
+L 712.4 25.542969 
+Q 714.4 25.542969 714.4 23.542969 
+L 714.4 11.92 
+Q 714.4 9.92 712.4 9.92 
+L 649.27125 9.92 
+Q 647.27125 9.92 647.27125 11.92 
+L 647.27125 23.542969 
+Q 647.27125 25.542969 649.27125 25.542969 
+z
+" style="fill: #fbf9f4; stroke: #171717; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <text style="font-weight: 600; font-size: 8px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: end; fill: #171717" x="711.36" y="20.573281" transform="rotate(-0 711.36 20.573281)">OBSERVED · 관측</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 8.5px; font-family: 'Pretendard', 'Malgun Gothic'; text-anchor: start; fill: #8b8b85" x="8.64" y="306.109707" transform="rotate(-0 8.64 306.109707)">출처: U.S. Census Bureau 수입 통계(한국산)</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb09af74ebd">
+   <rect x="76.506094" y="67.68" width="639.173906" height="182.606143"/>
+  </clipPath>
+ </defs>
+</svg>

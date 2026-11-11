@@ -1,0 +1,11 @@
+kbeauty:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('KBEAUTY_DUCKDB', 'warehouse/kbeauty.duckdb') }}"
+      threads: 4
+      # DuckDB's own thread pool: 1 makes floating-point aggregates sum in a fixed order, so every build gives
+      # bit-identical marts (docs/experiments/dbt_threads.md). dbt `threads` (models built at once) does not.
+      settings:
+        threads: 1

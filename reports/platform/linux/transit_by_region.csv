@@ -1,0 +1,4 @@
+﻿region,n,median,ci_low,ci_high,p10,p90
+west_coast,418,13.0,13.0,13.0,11.0,15.0
+gulf_coast,133,26.0,25.0,26.0,24.0,29.0
+east_coast,109,28.0,27.0,28.0,25.0,30.2

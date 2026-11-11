@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: dim_port
+    description: "Census port of unlading with state, region (seed state_region) and gateway type."
+    columns:
+      - name: port_code
+        tests: [not_null, unique]
+      - name: gateway_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['air', 'sea_land']
+  - name: fct_imports_hs10_mode_monthly
+    description: "Month x HS10 x transport mode (vessel / air / other). Grain is grain_key."
+    columns:
+      - name: grain_key
+        tests: [not_null, unique]
+      - name: mode
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['vessel', 'air', 'other']
+      - name: category
+        tests: [not_null]
+  - name: mart_monthly_summary
+    description: "Monthly totals, mode mix, unit values (USD/kg), YoY and post-policy flag."
+    columns:
+      - name: month
+        tests: [not_null, unique]
+  - name: mart_category_monthly
+    description: "Month x product category."
+  - name: mart_port_region_monthly
+    description: "Month x entry region x gateway type."
+  - name: mart_port_concentration_monthly
+    description: "Vessel-import concentration across ports (HHI), LA/LB and coast shares."
+    columns:
+      - name: month
+        tests: [not_null, unique]
+  - name: mart_vessel_transit
+    description: "Busan departure to US filing days by destination region."
+    columns:
+      - name: observation_id
+        tests: [not_null, unique]
+  - name: mart_country_panel_monthly
+    description: "Korea and eight peer countries x month: US imports of HS 3303/3304/3305/3307, unit values and FX."
+    columns:
+      - name: cty_code
+        tests: [not_null]
+      - name: lcu_per_usd
+        tests: [not_null]
+  - name: mart_mirror_monthly
+    description: "HS6 x month: Korean exports to the US (KCS, FOB) vs US imports from Korea (Census, customs value)."
+    columns:
+      - name: grain_key
+        tests: [not_null, unique]

@@ -1,0 +1,45 @@
+# Generates a CANDIDATE canonical reference. Artifact only: this run is not a success criterion and never writes
+# to the repository. A person downloads the artifact, reviews MANIFEST.json and the tables, and commits them to
+# reports/platform/linux/ in a separate commit. The verification CI (ci.yml) on a new runner must then reproduce
+# all 31 tables byte for byte.
+name: canonical-bootstrap
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["canonical/bootstrap"]
+
+permissions:
+  contents: read
+
+env:
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  OPENBLAS_CORETYPE: Haswell
+  NPY_DISABLE_CPU_FEATURES: X86_V4 AVX512_ICL AVX512_SPR
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+          enable-cache: true
+      - run: uv sync --frozen
+      - name: Numeric environment (fail unless pinned)
+        run: uv run python scripts/platform_reference.py verify
+      - name: Pipeline
+        run: uv run python scripts/run_all.py
+      - name: Same-job rerun determinism (a candidate from a nondeterministic run is useless)
+        run: uv run python scripts/check_rerun_determinism.py
+      - name: Candidate tables and MANIFEST.json
+        run: uv run python scripts/platform_reference.py write --out out/canonical-candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: canonical-candidate
+          path: out/canonical-candidate/
+          retention-days: 30

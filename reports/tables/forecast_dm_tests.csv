@@ -1,0 +1,8 @@
+﻿comparison,horizon,dm_stat,p_value,n,lag0_variance
+naive vs seasonal_naive (h1),1,-1.531678887905,0.169461464248,8,False
+ets_seasonal(BU) vs seasonal_naive (h3),3,-7.449214417705,0.000687624939,6,False
+naive vs ets_seasonal(BU) (h1),1,-0.651294129983,0.535644624866,8,False
+ml_selected(BU) vs naive (h1),1,0.688914847435,0.513056085035,8,False
+ml_selected(BU) vs ets_seasonal(BU) (h3),3,-0.172666707581,0.869685234982,6,True
+[post hoc] ml_lightgbm(BU) vs naive (h1),1,-1.035374597652,0.334931858045,8,False
+[post hoc] ml_xgboost(BU) vs naive (h1),1,-0.741850475459,0.482320999567,8,False

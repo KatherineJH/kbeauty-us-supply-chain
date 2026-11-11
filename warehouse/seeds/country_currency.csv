@@ -1,0 +1,10 @@
+cty_code,country,currency,is_treated
+5800,Korea,KRW,true
+4279,France,EUR,false
+1220,Canada,CAD,false
+4759,Italy,EUR,false
+5700,China,CNY,false
+2010,Mexico,MXN,false
+4120,United Kingdom,GBP,false
+4280,Germany,EUR,false
+5880,Japan,JPY,false

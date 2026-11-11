@@ -1,0 +1,8 @@
+series_name,currency,freq,unit,unit_mult_published,unit_mult_applied,direction,conversion_to_lcu_per_usd,fred_series_before_2026_11_06
+RXI_N.M.KO,KRW,129,Currency:_Per_USD,1,1,KRW per USD,value,EXKOUS
+RXI$US_N.M.EU,EUR,129,Currency:_Per_EUR,1,1,USD per EUR,1/value,EXUSEU
+RXI_N.M.CA,CAD,129,Currency:_Per_USD,1,1,CAD per USD,value,EXCAUS
+RXI_N.M.CH,CNY,129,Currency:_Per_USD,1,1,CNY per USD,value,EXCHUS
+RXI_N.M.MX,MXN,129,Currency:_Per_USD,1,1,MXN per USD,value,EXMXUS
+RXI$US_N.M.UK,GBP,129,Currency:_Per_GBP,0.00999999978,1,USD per GBP,1/value,EXUSUK
+RXI_N.M.JA,JPY,129,Currency:_Per_USD,1,1,JPY per USD,value,EXJPUS

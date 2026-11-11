@@ -1,0 +1,33 @@
+﻿metric,donor,weight
+value_usd,Canada,0.176858330687
+value_usd,China,0.0
+value_usd,France,0.0
+value_usd,Germany,0.109863865967
+value_usd,Italy,0.0
+value_usd,Japan,0.176010570329
+value_usd,Mexico,0.537267233017
+value_usd,United Kingdom,0.0
+measured_weight_kg,China,0.0
+measured_weight_kg,France,0.0
+measured_weight_kg,Germany,0.0
+measured_weight_kg,Italy,0.326037294918
+measured_weight_kg,Japan,0.415351852133
+measured_weight_kg,United Kingdom,0.258610852949
+air_weight_kg,China,0.228433052832
+air_weight_kg,France,0.0
+air_weight_kg,Germany,0.066663291354
+air_weight_kg,Italy,0.473944517028
+air_weight_kg,Japan,0.0
+air_weight_kg,United Kingdom,0.230959138786
+air_usd_per_kg,China,0.302579624451
+air_usd_per_kg,France,0.136234651543
+air_usd_per_kg,Germany,0.014873799548
+air_usd_per_kg,Italy,0.0
+air_usd_per_kg,Japan,0.013399771784
+air_usd_per_kg,United Kingdom,0.532912152675
+vessel_usd_per_kg,China,0.269825390842
+vessel_usd_per_kg,France,0.147604574833
+vessel_usd_per_kg,Germany,0.071797461524
+vessel_usd_per_kg,Italy,0.154325983478
+vessel_usd_per_kg,Japan,0.242824542517
+vessel_usd_per_kg,United Kingdom,0.113622046806

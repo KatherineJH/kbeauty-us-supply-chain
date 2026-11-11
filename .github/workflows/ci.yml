@@ -1,0 +1,80 @@
+# Rebuild everything from the committed raw data on a clean Linux runner. No secrets or network data calls:
+# the collectors run in --offline mode from data/raw.
+#
+# This job is the canonical environment. GitHub's ubuntu-24.04 runners land on different CPUs (observed: AMD EPYC
+# 7763 / 9V74 / 9V45, Intel Xeon 8370C / 8573C). numpy's AVX-512 (X86_V4) code paths and OpenBLAS's SkylakeX
+# kernels give different last bits than the AVX2/Haswell ones, and ETS, SARIMAX, ridge and the MLP amplify them
+# (docs/experiments/linux_determinism.md). The pins below apply to every step of the workflow. With them, all
+# stage records and all 31 tables were bit-identical in 16 passes on 4 CPU models (diagnostic run 41993240397)
+# and on 3 more runners including a fifth CPU model (run 41995368829).
+#
+# Order of checks:
+#   1. the numeric environment is the pinned one (fails otherwise)
+#   2. the pipeline
+#   3. same-job rerun: the forecasting and ML stages run twice more in fresh processes; any stage hash differing
+#      fails (nondeterminism on this machine)
+#   4. tests
+#   5. result tables: all 31 byte-identical to the committed canonical reference reports/platform/linux/ (which
+#      must match its MANIFEST.json and must come from a different, earlier bootstrap run); against the
+#      author-environment tables in reports/tables/, the 23 platform-invariant tables within rtol 1e-6 and the 8
+#      platform-sensitive ones by rules. A missing reference fails; nothing falls back to another environment.
+#
+# The canonical reference is generated separately by canonical-bootstrap.yml (artifact only, never a success
+# criterion), reviewed by a person and committed on its own.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  OPENBLAS_CORETYPE: Haswell
+  NPY_DISABLE_CPU_FEATURES: X86_V4 AVX512_ICL AVX512_SPR
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+          enable-cache: true
+
+      - name: Install locked dependencies
+        run: uv sync --frozen
+
+      - name: Numeric environment (record; fail unless pinned)
+        run: uv run python scripts/platform_reference.py verify
+
+      # The pipeline runs before the tests: some tests read dbt's warehouse/target/manifest.json.
+      - name: Pipeline (hash verify, offline re-extract, dbt build and data tests, report)
+        run: uv run python scripts/run_all.py
+
+      - name: Same-job rerun determinism (forecast and ML stages run twice more)
+        run: uv run python scripts/check_rerun_determinism.py
+
+      - name: Unit, integration and reproducibility tests
+        run: uv run pytest -q
+
+      - name: Result tables (31 byte-identical to the canonical reference; cross-platform rules)
+        run: uv run python scripts/compare_tables.py --rtol 1e-6 --atol 1e-9
+
+      # For inspection only when a check fails. This is not a canonical candidate: canonical references come only
+      # from the bootstrap workflow (canonical-bootstrap.yml) and are committed after review.
+      - name: Upload this run's tables (on failure, for inspection)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-tables-on-failure
+          path: reports/tables/

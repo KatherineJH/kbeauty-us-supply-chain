@@ -1,0 +1,23 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.pytest_tmp/
+.ipynb_checkpoints/
+
+# dbt / DuckDB build artifacts (rebuilt by scripts/run_all.py)
+warehouse/target/
+warehouse/logs/
+warehouse/dbt_packages/
+warehouse/*.duckdb
+warehouse/*.duckdb.wal
+warehouse/.user.yml
+logs/
+
+# Private notes (not published)
+docs/private/
+
+# Local scratch files (renders, drafts) — never published
+tmp/
+output/

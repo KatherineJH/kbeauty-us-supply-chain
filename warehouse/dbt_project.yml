@@ -1,0 +1,30 @@
+name: kbeauty
+version: "1.0.0"
+config-version: 2
+profile: kbeauty
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "logs"]
+
+vars:
+  # dbt is run from the repository root (see scripts/run_all.py)
+  extracted_dir: "data/extracted"
+  vessel_routes_path: "data/raw/vessel_routes/vessel_route_observations.csv"
+
+models:
+  kbeauty:
+    staging:
+      # tables, not views: the CSV paths are relative to the repo root, so a view would break when
+      # read from another working directory (e.g. a notebook in notebooks/)
+      +materialized: table
+    marts:
+      +materialized: table
+
+seeds:
+  kbeauty:
+    +column_types:
+      hs10: varchar
